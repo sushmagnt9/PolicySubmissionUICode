@@ -39,8 +39,8 @@ export class RegisterComponent implements OnInit {
         response => {
           console.log(response);
           this.response = response;
-          alert('Signup sucess');
-          this.ErrMsg = 'Signup sucess';
+          alert('registration sucess');
+          this.ErrMsg = 'registration sucess';
           return;
           // if(this.response.UserRole=='Author')
           // {
