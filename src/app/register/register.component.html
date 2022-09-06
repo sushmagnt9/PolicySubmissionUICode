@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Sign In</h1>
+    <h1>User Registration</h1>
     
             <label for="name"><b>User Name</b></label>
             <input type="text" placeholder="Enter UserName" name="UserName" [(ngModel)]="user.UserName">
@@ -12,13 +12,26 @@
               <option value="Author">Admin</option>
               <option value="Reader">Member</option>
             </select>
+            
+            <style>
+              #button1{
+              width: 300px;
+              height: 40px;
+              
+              }
+              #button2{
+              width: 300px;
+              height: 40px;
+              }
+              </style>
+
 
             <div class="form-group">
-            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Cancel</a>
+            <a  (click)="onSubmit()" type="button" id="button1" class="btn btn-primary">Cancel</a>
             </div>
             
             <div class="form-group">
-            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Register</a>
+            <a  (click)="onSubmit()" type="button" id="button2" class="btn btn-primary">Register</a>
             </div>
           
 </div>
