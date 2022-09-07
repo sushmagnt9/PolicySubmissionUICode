@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MemberRegister } from '../models/memberpage';
+import { memberService } from '../service/member.service';
 
 @Component({
   selector: 'app-membersearch',
@@ -6,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./membersearch.component.css']
 })
 export class MembersearchComponent implements OnInit {
-
-  constructor() { }
+  title = "Search Members";
+  users:MemberRegister[] = [];
+  user : MemberRegister = {
+    UserId:0,
+    UserName:'',
+    FirstName:'',
+    LastName:'',
+    DOB:new Date,
+    Address:'',
+    State:'',
+    Email:''
+  }
+  constructor(private memberService : memberService) { }
 
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    this.memberService.SearchMember(this.user)
+    .subscribe(
+      response => {
+         this.users = response;
+      }
+    );
+}
 }

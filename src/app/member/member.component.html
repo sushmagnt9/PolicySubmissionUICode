@@ -38,7 +38,7 @@
             <input type="text" placeholder="Enter Email" name="email" #email="ngModel" required [(ngModel)]="user.Email">
             <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is Required.</div>
 
-            <style>
+            <!-- <style>
               #button1{
               width: 300px;
               height: 40px;
@@ -48,7 +48,7 @@
               width: 300px;
               height: 40px;
               }
-              </style>
+              </style> -->
 
 
             <div class="form-group">
@@ -56,7 +56,7 @@
             </div>
             
             <div class="form-group">
-            <a  (click)="onSubmit()" href='member' type="button" id="button2" class="btn btn-primary">Register</a>
+            <a  (click)="onSubmit()" href='member' type="button" id="button2" class="btn btn-warning float-right">Register</a>
             </div>
           
 </div>
