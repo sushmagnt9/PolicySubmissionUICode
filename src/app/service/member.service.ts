@@ -10,7 +10,7 @@ import { MemberRegister } from '../models/memberpage';
 })
 export class memberService{
 
-  baseUrl = 'https://localhost:7274/validate';
+  baseUrl = 'https://localhost:7221/Registration';
 
   constructor(private http: HttpClient) { }
 

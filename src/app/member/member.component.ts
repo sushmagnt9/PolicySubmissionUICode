@@ -16,7 +16,9 @@ export class MemberComponent implements OnInit {
   user : MemberRegister = {
     UserId:0,
     UserName:'',
-    DOB:'',
+    FirstName:'',
+    LastName:'',
+    DOB:new Date,
     Address:'',
     State:'',
     Email:''
