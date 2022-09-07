@@ -25,6 +25,15 @@
             <input type="text" placeholder="Enter State" name="state" #state="ngModel" required [(ngModel)]="user.State">
             <div *ngIf="state.errors?.['required'] && state.touched" class="text-danger">State is Required.</div>
 
+            <label for="State"><b>State</b></label>
+            <select name="states" id="State" [(ngModel)]="user.State">
+              <option value="AndhraPradesh">AndhraPradesh</option>
+              <option value="Telangana">Telangana</option>
+              <option value="ArunachalPradesh">ArunachalPradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+            </select>
+
             <label for="Email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" #email="ngModel" required [(ngModel)]="user.Email">
             <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is Required.</div>
