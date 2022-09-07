@@ -2,26 +2,33 @@
     <h1>Member Registration</h1>
     
             <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="UserName" [(ngModel)]="user.UserName">
+            <input type="text" placeholder="Enter Name" name="username" #username="ngModel" required [(ngModel)]="user.UserName">
+            <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">UserName is Required.</div>
 
             <label for="firstname"><b>FirstName</b></label>
-            <input type="text" placeholder="Enter Name" name="UserName" [(ngModel)]="user.FirstName">
+            <input type="text" placeholder="Enter Name" name="firstname" #firstname="ngModel" required [(ngModel)]="user.FirstName">
+            <div *ngIf="firstname.errors?.['required'] && firstname.touched" class="text-danger">FirstName is Required.</div>
 
             <label for="Lastname"><b>LastName</b></label>
-            <input type="text" placeholder="Enter Name" name="UserName" [(ngModel)]="user.LastName">
-          
+            <input type="text" placeholder="Enter Name" name="lastname" #lastname="ngModel" required [(ngModel)]="user.LastName">
+            <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
+
             <label for="DOB"><b>DOB</b></label>
-            <input type="date" placeholder="Enter DOB" name="DOB" [(ngModel)]="user.DOB">
+            <input type="date" placeholder="Enter DOB" name="dob" #dob="ngModel" required [(ngModel)]="user.DOB">
+            <div *ngIf="dob.errors?.['required'] && dob.touched" class="text-danger">DOB is Required.</div>
 
             <label for="Address"><b>Address</b></label>
-            <input type="text" placeholder="Enter Address" name="Address" [(ngModel)]="user.Address">
+            <input type="text" placeholder="Enter Address" name="address" #address="ngModel" required [(ngModel)]="user.Address">
+            <div *ngIf="address.errors?.['required'] && address.touched" class="text-danger">Address is Required.</div>
 
             <label for="State"><b>State</b></label>
-            <input type="text" placeholder="Enter State" name="State" [(ngModel)]="user.State">
+            <input type="text" placeholder="Enter State" name="state" #state="ngModel" required [(ngModel)]="user.State">
+            <div *ngIf="state.errors?.['required'] && state.touched" class="text-danger">State is Required.</div>
 
             <label for="Email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="Email" [(ngModel)]="user.Email">
-          
+            <input type="text" placeholder="Enter Email" name="email" #email="ngModel" required [(ngModel)]="user.Email">
+            <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is Required.</div>
+
             <style>
               #button1{
               width: 300px;
