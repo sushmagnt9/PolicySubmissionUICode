@@ -2,10 +2,12 @@
     <h1>User Registration</h1>
     
             <label for="name"><b>User Name</b></label>
-            <input type="text" placeholder="Enter UserName" name="UserName" [(ngModel)]="user.UserName">
+            <input type="text" placeholder="Enter UserName" name="username" #username="ngModel" required [(ngModel)]="user.UserName">
+            <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">UserName is Required.</div>
           
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="Password" [(ngModel)]="user.Password">
+            <input type="password" placeholder="Enter Password" name="password" #password="ngModel" required [(ngModel)]="user.Password">
+            <div *ngIf="password.errors?.['required'] && password.touched" class="text-danger">Password is Required.</div>
           
             <label for="UserRole"><b>UserRole</b></label>
             <select name="Roles" id="UserRole" [(ngModel)]="user.UserRole">
