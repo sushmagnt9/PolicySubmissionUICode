@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
             return;
           }
           alert('Login Sucess');
-          //this.router.navigate(['/Login']);
+          this.router.navigate(['/memberSearch']);
         }
       )
       }

@@ -22,7 +22,7 @@ export class memberService{
   SearchMember(searchCriteria: MemberRegister):Observable<MemberRegister[]>{
 
     let queryParams = new HttpParams();
-      queryParams = queryParams.append("bookTitle",searchCriteria.UserName);
+      queryParams = queryParams.append("UserName",searchCriteria.UserName);
       queryParams = queryParams.append("FirstName",searchCriteria.FirstName);
       queryParams = queryParams.append("LastName",searchCriteria.LastName);
       queryParams = queryParams.append("Address",searchCriteria.Address);
