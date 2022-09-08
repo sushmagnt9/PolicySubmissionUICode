@@ -10,7 +10,7 @@ import { memberService } from '../service/member.service';
 export class MembersearchComponent implements OnInit {
   title = "Search Members";
  //users:MemberRegister[] ;
- users: Array<MemberRegister> = [
+ users: MemberRegister[] = [
   {
     userId:0,
     userName:'',
@@ -20,8 +20,7 @@ export class MembersearchComponent implements OnInit {
     address:'',
     state:'',
     email:''
-  }
-] 
+  }];
   user : MemberRegister = {
     userId:0,
     userName:'',
