@@ -19,7 +19,7 @@ export class memberService{
     return this.http.post<MemberRegister[]>(this.baseUrl, usersignup);
   }
 
-  SearchMember(searchCriteria: MemberRegister):Observable<Array<MemberRegister>>{
+  SearchMember(searchCriteria: MemberRegister):Observable<any>{
 
     let queryParams = new HttpParams();
       queryParams = queryParams.append("UserId",searchCriteria.userId);
@@ -29,7 +29,7 @@ export class memberService{
       // queryParams = queryParams.append("State",searchCriteria.State);
       // queryParams = queryParams.append("Email",searchCriteria.Email);
 
-      return this.http.get<Array<MemberRegister>>(this.baseUrl1,{params:queryParams});
+      return this.http.get<any>(this.baseUrl1,{params:queryParams});
   }
 
 }

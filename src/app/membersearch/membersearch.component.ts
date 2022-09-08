@@ -10,19 +10,10 @@ import { memberService } from '../service/member.service';
 export class MembersearchComponent implements OnInit {
   title = "Search Members";
  //users:MemberRegister[] ;
- users: MemberRegister[] = [
-  {
-    userId:0,
-    userName:'',
-    firstName:'',
-    lastName:'',
-    dob:new Date,
-    address:'',
-    state:'',
-    email:''
-  }];
+ users: any = {};
   user : MemberRegister = {
     userId:0,
+    policyId:0,
     userName:'',
     firstName:'',
     lastName:'',

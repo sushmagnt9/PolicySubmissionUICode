@@ -15,6 +15,7 @@ export class MemberComponent implements OnInit {
   users:MemberRegister[] = [];
   user : MemberRegister = {
     userId:0,
+    policyId:0,
     userName:'',
     firstName:'',
     lastName:'',
