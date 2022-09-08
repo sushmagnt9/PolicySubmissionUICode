@@ -22,12 +22,12 @@ export class memberService{
   SearchMember(searchCriteria: MemberRegister):Observable<MemberRegister[]>{
 
     let queryParams = new HttpParams();
-      queryParams = queryParams.append("UserName",searchCriteria.UserName);
+      queryParams = queryParams.append("UserId",searchCriteria.UserId);
       queryParams = queryParams.append("FirstName",searchCriteria.FirstName);
-      queryParams = queryParams.append("LastName",searchCriteria.LastName);
-      queryParams = queryParams.append("Address",searchCriteria.Address);
-      queryParams = queryParams.append("State",searchCriteria.State);
-      queryParams = queryParams.append("Email",searchCriteria.Email);
+       queryParams = queryParams.append("LastName",searchCriteria.LastName);
+      // queryParams = queryParams.append("Address",searchCriteria.Address);
+      // queryParams = queryParams.append("State",searchCriteria.State);
+      // queryParams = queryParams.append("Email",searchCriteria.Email);
 
       return this.http.get<MemberRegister[]>(this.baseUrl1,{params:queryParams});
   }

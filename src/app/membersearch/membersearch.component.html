@@ -2,15 +2,15 @@
     <h1>Member Search</h1>
     
             <label for="id"><b>Member ID:</b></label>
-            <input type="text" placeholder="Enter UserName" name="uesrid" #userid="ngModel" required [(ngModel)]="user.UserName">
-            <div *ngIf="userid.errors?.['required'] && userid.touched" class="text-danger">UserId is Required.</div>
+            <input type="text" placeholder="Enter UserName" name="uesrid" #userid="ngModel" required [(ngModel)]="user.UserId">
+            <div *ngIf="userid.errors?.['required'] && userid.touched" class="text-danger">MemberId is Required.</div>
           
             <label for="FirstName"><b>FirstName</b></label>
             <input type="text" placeholder="Enter FirstName" name="firstname" #firstname="ngModel" required [(ngModel)]="user.FirstName">
             <div *ngIf="firstname.errors?.['required'] && firstname.touched" class="text-danger">FirstName is Required.</div>
 
             <label for="LastName"><b>LastName</b></label>
-            <input type="text" placeholder="Enter LastName" name="lastname" #lastname="ngModel" required [(ngModel)]="user.FirstName">
+            <input type="text" placeholder="Enter LastName" name="lastname" #lastname="ngModel" required [(ngModel)]="user.LastName">
             <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
 
           
@@ -19,7 +19,32 @@
             </div>
             
             <div class="form-group">
-            <a  (click)="onSubmit()" href='register' type="button" class="btn btn-primary">Search</a>
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Search</a>
             </div>
           
+            <div class="row">
+                <div class="table-responsive" id="divUser">
+                    <div class="table-responsive">
+                        <table class="table table-striped border" *ngIf="users.length">
+                            <thead>
+                                <tr class="table-secondary">
+                                    <th>Member ID</th>
+                                    <th>UserName</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of users">
+                                    <td>{{user.UserId}}</td>
+                                    <td>{{user.UserName}}</td>
+                                    <td>{{user.FirstName}}</td>
+                                    <td>{{user.LastName}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
 </div>
