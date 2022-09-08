@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('response',this.response.response,)
           if(this.response.token=='')
           {
-            alert('Login failed');
+           // alert('Login failed');
             this.ErrMsg='Login failed';
             return;
           }

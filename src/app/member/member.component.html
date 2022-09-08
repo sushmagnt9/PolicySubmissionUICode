@@ -2,31 +2,31 @@
     <h1>Member Registration</h1>
     
             <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="username" #username="ngModel" required [(ngModel)]="user.UserName">
+            <input type="text" placeholder="Enter Name" name="username" #username="ngModel" required [(ngModel)]="user.userName">
             <div *ngIf="username.errors?.['required'] && username.touched" class="text-danger">UserName is Required.</div>
 
             <label for="firstname"><b>FirstName</b></label>
-            <input type="text" placeholder="Enter Name" name="firstname" #firstname="ngModel" required [(ngModel)]="user.FirstName">
+            <input type="text" placeholder="Enter Name" name="firstname" #firstname="ngModel" required [(ngModel)]="user.firstName">
             <div *ngIf="firstname.errors?.['required'] && firstname.touched" class="text-danger">FirstName is Required.</div>
 
             <label for="Lastname"><b>LastName</b></label>
-            <input type="text" placeholder="Enter Name" name="lastname" #lastname="ngModel" required [(ngModel)]="user.LastName">
+            <input type="text" placeholder="Enter Name" name="lastname" #lastname="ngModel" required [(ngModel)]="user.lastName">
             <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
 
             <label for="DOB"><b>DOB</b></label>
-            <input type="date" placeholder="Enter DOB" name="dob" #dob="ngModel" required [(ngModel)]="user.DOB">
+            <input type="date" placeholder="Enter DOB" name="dob" #dob="ngModel" required [(ngModel)]="user.dob">
             <div *ngIf="dob.errors?.['required'] && dob.touched" class="text-danger">DOB is Required.</div>
 
             <label for="Address"><b>Address</b></label>
-            <input type="text" placeholder="Enter Address" name="address" #address="ngModel" required [(ngModel)]="user.Address">
+            <input type="text" placeholder="Enter Address" name="address" #address="ngModel" required [(ngModel)]="user.address">
             <div *ngIf="address.errors?.['required'] && address.touched" class="text-danger">Address is Required.</div>
 
             <label for="State"><b>State</b></label>
-            <input type="text" placeholder="Enter State" name="state" #state="ngModel" required [(ngModel)]="user.State">
+            <input type="text" placeholder="Enter State" name="state" #state="ngModel" required [(ngModel)]="user.state">
             <div *ngIf="state.errors?.['required'] && state.touched" class="text-danger">State is Required.</div>
 
             <label for="State"><b>State</b></label>
-            <select name="states" id="State" [(ngModel)]="user.State">
+            <select name="states" id="State" [(ngModel)]="user.state">
               <option value="AndhraPradesh">AndhraPradesh</option>
               <option value="Telangana">Telangana</option>
               <option value="ArunachalPradesh">ArunachalPradesh</option>
@@ -35,7 +35,7 @@
             </select>
 
             <label for="Email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" #email="ngModel" required [(ngModel)]="user.Email">
+            <input type="text" placeholder="Enter Email" name="email" #email="ngModel" required [(ngModel)]="user.email">
             <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is Required.</div>
 
             <!-- <style>

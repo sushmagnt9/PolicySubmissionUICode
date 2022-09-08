@@ -9,16 +9,28 @@ import { memberService } from '../service/member.service';
 })
 export class MembersearchComponent implements OnInit {
   title = "Search Members";
-  users:MemberRegister[] = [];
+ //users:MemberRegister[] ;
+ users: Array<MemberRegister> = [
+  {
+    userId:0,
+    userName:'',
+    firstName:'',
+    lastName:'',
+    dob:new Date,
+    address:'',
+    state:'',
+    email:''
+  }
+] 
   user : MemberRegister = {
-    UserId:0,
-    UserName:'',
-    FirstName:'',
-    LastName:'',
-    DOB:new Date,
-    Address:'',
-    State:'',
-    Email:''
+    userId:0,
+    userName:'',
+    firstName:'',
+    lastName:'',
+    dob:new Date,
+    address:'',
+    state:'',
+    email:''
   }
   constructor(private memberService : memberService) { }
 
@@ -28,7 +40,9 @@ export class MembersearchComponent implements OnInit {
     this.memberService.SearchMember(this.user)
     .subscribe(
       response => {
-         this.users = response;
+        // this.users=Object.values(response);
+        this.users = response;
+         console.log(this.users);
       }
     );
 }

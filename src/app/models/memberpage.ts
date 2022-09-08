@@ -1,10 +1,10 @@
 export interface MemberRegister{
-UserId : number,
-UserName : string,
-FirstName : string,
-LastName : string,
-DOB : Date,
-Address : string,
-State : string,
-Email : string
+userId : number,
+userName : string,
+firstName : string,
+lastName : string,
+dob : Date,
+address : string,
+state : string,
+email : string
 }

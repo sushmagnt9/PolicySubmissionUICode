@@ -19,17 +19,17 @@ export class memberService{
     return this.http.post<MemberRegister[]>(this.baseUrl, usersignup);
   }
 
-  SearchMember(searchCriteria: MemberRegister):Observable<MemberRegister[]>{
+  SearchMember(searchCriteria: MemberRegister):Observable<Array<MemberRegister>>{
 
     let queryParams = new HttpParams();
-      queryParams = queryParams.append("UserId",searchCriteria.UserId);
-      queryParams = queryParams.append("FirstName",searchCriteria.FirstName);
-       queryParams = queryParams.append("LastName",searchCriteria.LastName);
+      queryParams = queryParams.append("UserId",searchCriteria.userId);
+      queryParams = queryParams.append("FirstName",searchCriteria.firstName);
+       queryParams = queryParams.append("LastName",searchCriteria.lastName);
       // queryParams = queryParams.append("Address",searchCriteria.Address);
       // queryParams = queryParams.append("State",searchCriteria.State);
       // queryParams = queryParams.append("Email",searchCriteria.Email);
 
-      return this.http.get<MemberRegister[]>(this.baseUrl1,{params:queryParams});
+      return this.http.get<Array<MemberRegister>>(this.baseUrl1,{params:queryParams});
   }
 
 }

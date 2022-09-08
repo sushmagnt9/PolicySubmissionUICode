@@ -14,14 +14,14 @@ export class MemberComponent implements OnInit {
   title = 'memberRegister';
   users:MemberRegister[] = [];
   user : MemberRegister = {
-    UserId:0,
-    UserName:'',
-    FirstName:'',
-    LastName:'',
-    DOB:new Date,
-    Address:'',
-    State:'',
-    Email:''
+    userId:0,
+    userName:'',
+    firstName:'',
+    lastName:'',
+    dob:new Date,
+    address:'',
+    state:'',
+    email:''
   }
 
   constructor(private memberService : memberService , private router : Router) { }
