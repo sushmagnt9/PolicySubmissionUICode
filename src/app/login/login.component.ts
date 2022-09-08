@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
             this.ErrMsg='Login failed';
             return;
           }
-          alert('Login Sucess');
+          //alert('Login Sucess');
           this.router.navigate(['/memberSearch']);
         }
       )
