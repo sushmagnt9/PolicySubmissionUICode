@@ -27,6 +27,7 @@
                     <div class="table-responsive">
                         <table class="table table-striped border" *ngFor="let ss of users">
                             <thead>
+
                                 <tr class="table-secondary">
                                     <th>Member ID</th>
                                     <th>Policy ID</th>
@@ -50,6 +51,11 @@
                                     <td>{{member.premiumAmount}}</td>
                                 </tr>
                             </tbody>
+
+                            <div class="form-group">
+                                <a  (click)="onSubmit()" type="button" class="btn btn-primary">Add Policy</a>
+                                </div>
+                                
                         </table>
                     </div>
                 </div>
