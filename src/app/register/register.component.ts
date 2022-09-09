@@ -31,7 +31,6 @@ export class RegisterComponent implements OnInit {
     console.info(this.val);
   }
   response:any;
-  ErrMsg=''
   onSubmit() {
       debugger;
       this.registerService.User(this.user)
@@ -39,8 +38,6 @@ export class RegisterComponent implements OnInit {
         response => {
           console.log(response);
           this.response = response;
-          alert('registration sucess');
-          this.ErrMsg = 'registration sucess';
           return;
           // if(this.response.UserRole=='Author')
           // {
