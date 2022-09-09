@@ -3,7 +3,7 @@
     
             <label for="name"><b>Policy Type</b></label>
             <input type="text" placeholder="Enter policyType" name="policytype" #policytype="ngModel" required [(ngModel)]="user.policyType">
-            <div *ngIf="policytype.errors?.['required'] && policytype.touched" class="text-danger">UserName is Required.</div>
+            <div *ngIf="policytype.errors?.['required'] && policytype.touched" class="text-danger">PolicyType is Required.</div>
           
             <label for="premiumamount"><b>Premium Amount</b></label>
             <input type="text" placeholder="Enter premiumAmount" name="premiumamount" #premiumamount="ngModel" required [(ngModel)]="user.premiumAmount">
