@@ -16,6 +16,10 @@ export class MemberComponent implements OnInit {
   user : MemberRegister = {
     userId:0,
     policyId:0,
+    policyStatus:'',
+    policyType:'',
+    premiumAmount:'',
+    createdDate:new Date,
     userName:'',
     firstName:'',
     lastName:'',

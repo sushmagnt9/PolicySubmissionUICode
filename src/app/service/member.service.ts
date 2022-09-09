@@ -31,5 +31,8 @@ export class memberService{
 
       return this.http.get<any>(this.baseUrl1,{params:queryParams});
   }
+  AddPolicy(policy : MemberRegister):Observable<MemberRegister[]>{
+    return this.http.post<MemberRegister[]>(this.baseUrl, policy);
+  }
 
 }

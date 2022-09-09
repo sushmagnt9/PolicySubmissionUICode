@@ -10,7 +10,7 @@
             <div *ngIf="premiumamount.errors?.['required'] && premiumamount.touched" class="text-danger">premiumAmount is Required.</div>
           
             <label for="policyEffective date"><b>Policy Effective Date</b></label>
-            <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.policyEffectiveDate">
+            <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.createdDate">
             <div *ngIf="policyeffectivedate.errors?.['required'] && policyeffectivedate.touched" class="text-danger">policyEffectiveDate is Required.</div>
         
             <div class="form-group">

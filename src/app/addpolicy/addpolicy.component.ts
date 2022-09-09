@@ -13,6 +13,10 @@ export class AddpolicyComponent implements OnInit {
   user : MemberRegister = {
     userId:0,
     policyId:0,
+    policyStatus:'',
+    policyType:'',
+    premiumAmount:'',
+    createdDate:new Date,
     userName:'',
     firstName:'',
     lastName:'',
@@ -21,9 +25,19 @@ export class AddpolicyComponent implements OnInit {
     state:'',
     email:''
   }
-  constructor() { }
+  constructor(private memberService: memberService) { }
 
   ngOnInit(): void {
   }
+  onSubmit(){
+    this.memberService.AddPolicy(this.user)
+    .subscribe(
+      response => {
+        // this.users=Object.values(response);
+        this.users = response;
+         console.log(this.users);
+      }
+    );
+}
 
 }
