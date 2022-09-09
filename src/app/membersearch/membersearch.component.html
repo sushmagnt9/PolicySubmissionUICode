@@ -37,6 +37,7 @@
                                     <th>Policy Status</th>
                                     <th>Policy Type</th>
                                     <th>Premium Amount</th>
+                                    <th>Policy Effective Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,13 +50,14 @@
                                     <td>{{member.policyStatus}}</td>
                                     <td>{{member.policyType}}</td>
                                     <td>{{member.premiumAmount}}</td>
+                                    <td>{{member.createdDate}}</td>
                                 </tr>
                             </tbody>
 
                             <div class="form-group">
                                 <a  (click)="onSubmit()" type="button" class="btn btn-primary">Add Policy</a>
                                 </div>
-                                
+
                         </table>
                     </div>
                 </div>

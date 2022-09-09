@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Policy Submission</h1>
+    
+            <label for="name"><b>Policy Type</b></label>
+            <input type="text" placeholder="Enter policyType" name="policytype" #policytype="ngModel" required [(ngModel)]="user.policyType">
+            <div *ngIf="policytype.errors?.['required'] && policytype.touched" class="text-danger">UserName is Required.</div>
+          
+            <label for="premiumamount"><b>Premium Amount</b></label>
+            <input type="text" placeholder="Enter premiumAmount" name="premiumamount" #premiumamount="ngModel" required [(ngModel)]="user.premiumAmount">
+            <div *ngIf="premiumamount.errors?.['required'] && premiumamount.touched" class="text-danger">premiumAmount is Required.</div>
+          
+            <label for="policyEffective date"><b>Policy Effective Date</b></label>
+            <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.policyEffectiveDate">
+            <div *ngIf="policyeffectivedate.errors?.['required'] && policyeffectivedate.touched" class="text-danger">policyEffectiveDate is Required.</div>
+        
+            <div class="form-group">
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Submit</a>
+            </div>
+          
+</div>

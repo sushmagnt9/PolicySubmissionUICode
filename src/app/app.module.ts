@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberComponent } from './member/member.component';
 import { MembersearchComponent } from './membersearch/membersearch.component';
+import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MembersearchComponent } from './membersearch/membersearch.component';
     NavbarComponent,
     RegisterComponent,
     MemberComponent,
-    MembersearchComponent
+    MembersearchComponent,
+    AddpolicyComponent
   ],
   imports: [
     BrowserModule,
