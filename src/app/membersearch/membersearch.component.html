@@ -2,8 +2,8 @@
     <h1>Member Search</h1>
     
             <label for="id"><b>Member ID:</b></label>
-            <input type="text" placeholder="Enter UserName" name="uesrid" #userid="ngModel" required [(ngModel)]="user.userId">
-            <div *ngIf="userid.errors?.['required'] && userid.touched" class="text-danger">MemberId is Required.</div>
+            <input type="text" placeholder="Enter MemberId" name="memberid" #memberid="ngModel" required [(ngModel)]="user.memberId">
+            <div *ngIf="memberid.errors?.['required'] && memberid.touched" class="text-danger">MemberId is Required.</div>
           
             <label for="FirstName"><b>FirstName</b></label>
             <input type="text" placeholder="Enter FirstName" name="firstname" #firstname="ngModel" required [(ngModel)]="user.firstName">

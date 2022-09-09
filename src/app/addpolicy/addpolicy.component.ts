@@ -11,7 +11,7 @@ export class AddpolicyComponent implements OnInit {
   title = "Add Policy";
   users: any = {};
   user : MemberRegister = {
-    userId:0,
+    memberId:0,
     policyId:0,
     policyStatus:'',
     policyType:'',

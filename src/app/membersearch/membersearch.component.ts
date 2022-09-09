@@ -12,7 +12,7 @@ export class MembersearchComponent implements OnInit {
  //users:MemberRegister[] ;
  users: any = {};
   user : MemberRegister = {
-    userId:0,
+    memberId:0,
     policyId:0,
     policyStatus:'',
     policyType:'',

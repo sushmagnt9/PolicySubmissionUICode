@@ -1,5 +1,5 @@
 export interface MemberRegister{
-userId : number,
+memberId : number,
 policyId : number,
 policyStatus : string,
 policyType : string,
