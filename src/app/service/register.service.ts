@@ -9,7 +9,7 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class registerService{
 
-  baseUrl = 'https://localhost:7221/User';
+  baseUrl = 'https://localhost:7221/Registration';
 
   constructor(private http: HttpClient) { }
 

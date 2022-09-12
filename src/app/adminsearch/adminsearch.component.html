@@ -1,0 +1,80 @@
+<div class="container">
+    <h1>Member Search</h1>
+    
+            <label for="id"><b>Member ID:</b></label>
+            <input type="text" placeholder="Enter MemberId" name="memberid" #memberid="ngModel" required [(ngModel)]="user.memberId">
+            <div *ngIf="memberid.errors?.['required'] && memberid.touched" class="text-danger">MemberId is Required.</div>
+          
+            <label for="FirstName"><b>FirstName</b></label>
+            <input type="text" placeholder="Enter FirstName" name="firstname" #firstname="ngModel" required [(ngModel)]="user.firstName">
+            <div *ngIf="firstname.errors?.['required'] && firstname.touched" class="text-danger">FirstName is Required.</div>
+
+            <label for="LastName"><b>LastName</b></label>
+            <input type="text" placeholder="Enter LastName" name="lastname" #lastname="ngModel" required [(ngModel)]="user.lastName">
+            <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
+
+            <label for="PolicyId"><b>PolicyId</b></label>
+            <input type="text" placeholder="Enter PolicyId" name="policyId"  [(ngModel)]="user.policyId">
+
+            <label for="policyStatus"><b>Policy Status</b></label>
+            <select name="status" id="policyStatus" [(ngModel)]="user.policyStatus">
+              <option value="FreeLookUp">FreeLookUp</option>
+              <option value="Active">Active</option>
+              <option value="Lapsed">Lapsed</option>
+              <option value="Surrendered">Surrendered</option>
+              <option value="Claimed">Claimed</option>
+              <option value="Loan">Loan</option>
+            </select>
+            
+            <!-- <div class="form-group">
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Clear</a>
+            </div>
+             -->
+            <div class="form-group">
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Search</a>
+            </div>
+          
+            <div class="row" *ngIf = 'users[0]!="No record found" '>
+                <div class="table-responsive" id="divUser">
+                    <div class="table-responsive">
+                        <table class="table table-striped border" *ngFor="let ss of users">
+                            <thead>
+
+                                <tr class="table-secondary">
+                                    <th>Member ID</th>
+                                    <th>Policy ID</th>
+                                    <th>UserName</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Policy Status</th>
+                                    <th>Policy Type</th>
+                                    <th>Premium Amount</th>
+                                    <th>Policy Effective Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let member of ss" >
+                                    <td>{{member["memberId"]}}</td>
+                                    <td>{{member["policyId"]}}</td>
+                                    <td>{{member.userName}}</td>
+                                    <td>{{member.firstName}}</td>
+                                    <td>{{member.lastName}}</td>
+                                    <td>{{member.policyStatus}}</td>
+                                    <td>{{member.policyType}}</td>
+                                    <td>{{member.premiumAmount}}</td>
+                                    <td>{{member.policyEffectiveDate}}</td>                               
+                                </tr>
+                            </tbody>
+
+                            <div class="form-group">
+                                <a  (click)="onRedirect()"  type="button" class="btn btn-primary">Update Policy</a>
+                                </div>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row" *ngIf = 'users[0]=="No record found" '>
+                <span style="color: red;">No records found</span>
+              </div>
+</div>

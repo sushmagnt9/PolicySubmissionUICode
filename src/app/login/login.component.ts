@@ -14,8 +14,9 @@ export class LoginComponent implements OnInit {
   users:User[] = [];
   user : User = {
     id:'',
-    UserName:'',
-    Password:''
+    UserName :'',
+    Password :'',
+    userRole :''
   }
   constructor(private loginService : loginService,private router : Router) { }
 
@@ -44,8 +45,15 @@ export class LoginComponent implements OnInit {
             this.ErrMsg='Login failed';
             return;
           }
+          else if(this.response.UserRole == 'Member')
+          {
           //alert('Login Sucess');
           this.router.navigate(['/memberSearch']);
+          }
+          else if(this.response.UserRole == 'Admin')
+          {
+            this.router.navigate(['/adminSearch']);
+          }
         }
       )
       }
