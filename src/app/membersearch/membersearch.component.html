@@ -13,7 +13,19 @@
             <input type="text" placeholder="Enter LastName" name="lastname" #lastname="ngModel" required [(ngModel)]="user.lastName">
             <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
 
-          
+            <label for="PolicyId"><b>PolicyId</b></label>
+            <input type="text" placeholder="Enter PolicyId" name="policyId"  [(ngModel)]="user.policyId">
+
+            <label for="policyStatus"><b>Policy Status</b></label>
+            <select name="status" id="policyStatus" [(ngModel)]="user.policyStatus">
+              <option value="FreeLookUp">FreeLookUp</option>
+              <option value="Active">Active</option>
+              <option value="Lapsed">Lapsed</option>
+              <option value="Surrendered">Surrendered</option>
+              <option value="Claimed">Claimed</option>
+              <option value="Loan">Loan</option>
+            </select>
+            
             <div class="form-group">
             <a  (click)="onSubmit()" type="button" class="btn btn-primary">Clear</a>
             </div>
@@ -22,7 +34,7 @@
             <a  (click)="onSubmit()" type="button" class="btn btn-primary">Search</a>
             </div>
           
-            <div class="row">
+            <div class="row" *ngIf = 'users[0]!="No record found" '>
                 <div class="table-responsive" id="divUser">
                     <div class="table-responsive">
                         <table class="table table-striped border" *ngFor="let ss of users">
@@ -55,12 +67,14 @@
                             </tbody>
 
                             <div class="form-group">
-                                <a  (click)="onSubmit()" href='addpolicy' type="button" class="btn btn-primary">Add Policy</a>
+                                <a  (click)="onRedirect()"  type="button" class="btn btn-primary">Add Policy</a>
                                 </div>
 
                         </table>
                     </div>
                 </div>
             </div>
-            
+            <div class="row" *ngIf = 'users[0]=="No record found" '>
+                <span style="color: red;">No records found</span>
+              </div>
 </div>

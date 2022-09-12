@@ -11,7 +11,7 @@ export class AddpolicyComponent implements OnInit {
   title = "Add Policy";
   users: any = {};
   user : MemberRegister = {
-    memberId:0,
+    
     policyId:0,
     policyStatus:'',
     policyType:'',
@@ -23,7 +23,8 @@ export class AddpolicyComponent implements OnInit {
     dob:new Date,
     address:'',
     state:'',
-    email:''
+    email:'',
+    memberId: localStorage.getItem("example")?.toString(),
   }
   constructor(private memberService: memberService) { }
 
