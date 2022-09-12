@@ -25,7 +25,7 @@
             </select>
 
             <label for="policyEffective date"><b>Policy Effective Date</b></label>
-            <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.createdDate">
+            <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.policyEffectiveDate">
             <div *ngIf="policyeffectivedate.errors?.['required'] && policyeffectivedate.touched" class="text-danger">policyEffectiveDate is Required.</div>
     
             <div class="form-group">

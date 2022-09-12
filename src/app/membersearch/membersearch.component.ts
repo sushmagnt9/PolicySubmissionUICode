@@ -18,7 +18,7 @@ export class MembersearchComponent implements OnInit {
     policyStatus:'',
     policyType:'',
     premiumAmount:'',
-    createdDate:new Date,
+    policyEffectiveDate:new Date,
     userName:'',
     firstName:'',
     lastName:'',

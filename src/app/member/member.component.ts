@@ -19,7 +19,7 @@ export class MemberComponent implements OnInit {
     policyStatus:'',
     policyType:'',
     premiumAmount:'',
-    createdDate:new Date,
+    policyEffectiveDate:new Date,
     userName:'',
     firstName:'',
     lastName:'',

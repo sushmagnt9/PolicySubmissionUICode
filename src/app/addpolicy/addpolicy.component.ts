@@ -16,7 +16,7 @@ export class AddpolicyComponent implements OnInit {
     policyStatus:'',
     policyType:'',
     premiumAmount:'',
-    createdDate:new Date,
+    policyEffectiveDate:new Date,
     userName:'',
     firstName:'',
     lastName:'',
