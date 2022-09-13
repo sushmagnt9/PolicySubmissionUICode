@@ -13,6 +13,7 @@ export class memberService{
   baseUrl = 'https://localhost:7221/Registration';
   baseUrl1 = 'https://localhost:7221/Registration/GetMemberById';
   baseUrl2 = 'https://localhost:7221/Policy';
+  baseUrl3 = 'https://localhost:7221/Policy/UpdatePolicy';
 
   constructor(private http: HttpClient) { }
 
@@ -34,6 +35,10 @@ export class memberService{
   }
   AddPolicy(policy : MemberRegister):Observable<MemberRegister[]>{
     return this.http.post<MemberRegister[]>(this.baseUrl2, policy);
+  }
+  
+  updatePolicy(policy: MemberRegister):Observable<MemberRegister>{
+    return this.http.put<MemberRegister>(this.baseUrl3 ,policy);
   }
 
 }

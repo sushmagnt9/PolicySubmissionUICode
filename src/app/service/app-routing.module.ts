@@ -6,13 +6,15 @@ import { LoginComponent } from "../login/login.component";
 import { MemberComponent } from '../member/member.component';
 import { MembersearchComponent } from '../membersearch/membersearch.component';
 import { RegisterComponent } from '../register/register.component';
+import { UpdatepolicyComponent } from '../updatepolicy/updatepolicy.component';
 
 const routes: Routes = [{path : '' , component : LoginComponent},
 {path : 'register' , component : RegisterComponent},
 {path : 'member' , component : MemberComponent},
 {path : 'memberSearch' , component : MembersearchComponent},
 {path : 'addpolicy' , component : AddpolicyComponent},
-{path : 'adminSearch',component : AdminsearchComponent}
+{path : 'adminSearch',component : AdminsearchComponent},
+{path : 'updatepolicy' , component : UpdatepolicyComponent}
 ];
 
 @NgModule({

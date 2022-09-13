@@ -12,6 +12,7 @@ import { MemberComponent } from './member/member.component';
 import { MembersearchComponent } from './membersearch/membersearch.component';
 import { AddpolicyComponent } from './addpolicy/addpolicy.component';
 import { AdminsearchComponent } from './adminsearch/adminsearch.component';
+import { UpdatepolicyComponent } from './updatepolicy/updatepolicy.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AdminsearchComponent } from './adminsearch/adminsearch.component';
     MemberComponent,
     MembersearchComponent,
     AddpolicyComponent,
-    AdminsearchComponent
+    AdminsearchComponent,
+    UpdatepolicyComponent
   ],
   imports: [
     BrowserModule,
