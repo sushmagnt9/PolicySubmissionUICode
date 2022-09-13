@@ -13,7 +13,7 @@ export class UpdatepolicyComponent implements OnInit {
   user : MemberRegister = {
     
     policyId:0,
-    policyStatus:'',
+    policyStatus:localStorage.getItem("policyStatus")?.toString(),
     policyType:'',
     premiumAmount:'',
     policyEffectiveDate:new Date,

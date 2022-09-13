@@ -47,6 +47,10 @@ export class AdminsearchComponent implements OnInit {
          console.log(this.users);
           localStorage.setItem("UserId",user.memberId.toString());
           console.log(localStorage.getItem("UserId")?.toString());
+          localStorage.setItem("policyStatus",user.policyStatus.toString());
+          console.log(localStorage.getItem("policyStatus")?.toString());
+          localStorage.setItem("premiumAmount",user.premiumAmount.toString());
+          console.log(localStorage.getItem("premiumAmount")?.toString());
           this.router.navigate(['/updatepolicy']);
        }
     
