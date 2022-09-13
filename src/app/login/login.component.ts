@@ -39,16 +39,22 @@ export class LoginComponent implements OnInit {
           console.log(response);
           this.response = response;
           localStorage.setItem('response',this.response.response,)
-          if(this.response.token=='')
+          if(this.response.userRole=='Admin')
           {
            // alert('Login failed');
-            this.ErrMsg='Login failed';
-            return;
+           this.router.navigate(['/adminSearch']);
+            // this.ErrMsg='Login failed';
+            // return;
           }
-          else 
+          else if(this.response.userRole=='Member')
           {
           //alert('Login Sucess');
           this.router.navigate(['/memberSearch']);
+          }
+          else
+          {
+            this.ErrMsg='Login failed';
+             return;
           }
           
         }

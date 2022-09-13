@@ -9,7 +9,7 @@ import { User } from '../models/loginpage';
 })
 export class loginService{
 
-  baseUrl = 'https://localhost:7274/validate';
+  baseUrl = 'https://localhost:7221/User/Login';
 
   constructor(private http: HttpClient) { }
 
