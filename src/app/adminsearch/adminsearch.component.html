@@ -51,6 +51,7 @@
                                     <th>Premium Amount</th>
                                     <th>Policy Effective Date</th>
                                     <th>Select Member</th>
+                                    <th>Select Policy</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,14 +65,15 @@
                                     <td>{{member.policyType}}</td>
                                     <td>{{member.premiumAmount}}</td>
                                     <td>{{member.policyEffectiveDate}}</td> 
-                                    
-                                    <a  (click)="onSubmit()" type="button" class="btn btn-primary">Edit</a>
+                                    <td><input type ="checkbox"/></td>
+                                    <td><input type = "checkbox" value = "updatePolicy" id = "updatePolicy"
+                                       (click) = "onRedirect(user)"/> </td>
                                 </tr>
                             </tbody>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <a  (click)="onRedirect()"  type="button" class="btn btn-primary">Update Policy</a>
-                                </div>
+                                </div> -->
 
                         </table>
                     </div>

@@ -27,9 +27,7 @@ export class memberService{
       queryParams = queryParams.append("UserId",searchCriteria.memberId);
       queryParams = queryParams.append("FirstName",searchCriteria.firstName);
        queryParams = queryParams.append("LastName",searchCriteria.lastName);
-      // queryParams = queryParams.append("Address",searchCriteria.Address);
-      // queryParams = queryParams.append("State",searchCriteria.State);
-      // queryParams = queryParams.append("Email",searchCriteria.Email);
+       queryParams = queryParams.append("policyStatus",searchCriteria.policyStatus);
 
       return this.http.get<any>(this.baseUrl1,{params:queryParams});
   }

@@ -24,7 +24,7 @@ export class AddpolicyComponent implements OnInit {
     address:'',
     state:'',
     email:'',
-    memberId: localStorage.getItem("example")?.toString(),
+    memberId: 0
   }
   constructor(private memberService: memberService) { }
 

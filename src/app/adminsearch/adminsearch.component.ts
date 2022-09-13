@@ -13,7 +13,6 @@ export class AdminsearchComponent implements OnInit {
   //users:MemberRegister[] ;
   users: any = {};
    user : MemberRegister = {
-     memberId:0,
      policyId:0,
      policyStatus:'',
      policyType:'',
@@ -25,7 +24,8 @@ export class AdminsearchComponent implements OnInit {
      dob:new Date,
      address:'',
      state:'',
-     email:''
+     email:'',
+     memberId: 0
    }
    constructor(private memberService : memberService,private router : Router) { }
  
@@ -42,19 +42,14 @@ export class AdminsearchComponent implements OnInit {
      )
    }
  
-   onRedirect(){
-     this.memberService.SearchMember(this.user)
-     .subscribe(
-       response => {
+   onRedirect(user : MemberRegister){
          // this.users=Object.values(response);
-         this.users = response;
-          console.log(this.users);
-          localStorage.setItem("example",this.user.memberId.toString());
-          console.log(localStorage.getItem("example")?.toString());
+         console.log(this.users);
+          localStorage.setItem("UserId",user.memberId.toString());
+          console.log(localStorage.getItem("UserId")?.toString());
           this.router.navigate(['/updatepolicy']);
        }
-     );
- }
+    
  
  
  }
