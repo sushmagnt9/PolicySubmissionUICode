@@ -13,9 +13,9 @@ export class UpdatepolicyComponent implements OnInit {
   user : MemberRegister = {
     
     policyId:0,
-    policyStatus:localStorage.getItem("policyStatus")?.toString(),
+    policyStatus: localStorage.getItem("policyStatus")?.toString(),
     policyType:'',
-    premiumAmount:'',
+    premiumAmount: localStorage.getItem("premiumAmount")?.toString(),
     policyEffectiveDate:new Date,
     userName:'',
     firstName:'',

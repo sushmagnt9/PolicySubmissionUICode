@@ -24,7 +24,7 @@ export class AddpolicyComponent implements OnInit {
     address:'',
     state:'',
     email:'',
-    memberId: 0
+    memberId: localStorage.getItem("UserId")?.toString(),
   }
   constructor(private memberService: memberService) { }
 
@@ -37,6 +37,8 @@ export class AddpolicyComponent implements OnInit {
         // this.users=Object.values(response);
         this.users = response;
          console.log(this.users);
+         localStorage.setItem("UserId",this.user.memberId.toString());
+         console.log(localStorage.getItem("UserId")?.toString());
       }
     );
 }
