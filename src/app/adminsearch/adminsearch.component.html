@@ -50,6 +50,7 @@
                                     <th>Policy Type</th>
                                     <th>Premium Amount</th>
                                     <th>Policy Effective Date</th>
+                                    <th>Select Member</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,7 +63,9 @@
                                     <td>{{member.policyStatus}}</td>
                                     <td>{{member.policyType}}</td>
                                     <td>{{member.premiumAmount}}</td>
-                                    <td>{{member.policyEffectiveDate}}</td>                               
+                                    <td>{{member.policyEffectiveDate}}</td> 
+                                    
+                                    <a  (click)="onSubmit()" type="button" class="btn btn-primary">Edit</a>
                                 </tr>
                             </tbody>
 

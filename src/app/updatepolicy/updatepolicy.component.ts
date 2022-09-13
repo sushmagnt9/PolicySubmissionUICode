@@ -31,7 +31,7 @@ export class UpdatepolicyComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    this.memberService.AddPolicy(this.user)
+    this.memberService.updatePolicy(this.user)
     .subscribe(
       response => {
         // this.users=Object.values(response);

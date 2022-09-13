@@ -51,7 +51,7 @@ export class AdminsearchComponent implements OnInit {
           console.log(this.users);
           localStorage.setItem("example",this.user.memberId.toString());
           console.log(localStorage.getItem("example")?.toString());
-          this.router.navigate(['/addpolicy']);
+          this.router.navigate(['/updatepolicy']);
        }
      );
  }
