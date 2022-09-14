@@ -33,17 +33,20 @@ export class RegisterComponent implements OnInit {
   response:any;
   EmpMsg='';
   onSubmit() {
+    debugger;
     if(this.user.UserName=='' && this.user.UserRole=='' && this.user.Password=='')
     {
       this.EmpMsg = 'please provide all details to register';
         return;
     }
-      debugger;
+    if(this.user.UserName!='' && this.user.UserRole!='' && this.user.Password!='')
+    {
       this.registerService.User(this.user)
       .subscribe(
         response => {
           console.log(response);
           this.response = response;
+          this.router.navigate(['/member']);
           return;
           // if(this.response.UserRole=='Author')
           // {
@@ -54,5 +57,6 @@ export class RegisterComponent implements OnInit {
           // }
         }
       )
-      }     
+      } 
+    }    
 }
