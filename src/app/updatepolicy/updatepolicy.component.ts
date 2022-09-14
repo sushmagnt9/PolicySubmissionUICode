@@ -24,7 +24,7 @@ export class UpdatepolicyComponent implements OnInit {
     address:'',
     state:'',
     email:'',
-    memberId: localStorage.getItem("example")?.toString(),
+    memberId: localStorage.getItem("UserId")?.toString(),
   }
   constructor(private memberService: memberService) { }
 

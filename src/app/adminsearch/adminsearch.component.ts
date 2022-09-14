@@ -47,8 +47,8 @@ export class AdminsearchComponent implements OnInit {
          debugger;
           console.log(user);
 
-          localStorage.setItem("UserId",user.memberId.toString());
-          console.log(localStorage.getItem("UserId")?.toString());
+          localStorage.setItem("UserId",this.users[0][0].memberId.toString());
+          console.log(localStorage.getItem("UserId"));
           localStorage.setItem("policyStatus",user.policyStatus.toString());
           console.log(localStorage.getItem("policyStatus")?.toString());
           localStorage.setItem("premiumAmount",user.premiumAmount.toString());
