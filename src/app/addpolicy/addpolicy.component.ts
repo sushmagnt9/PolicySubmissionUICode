@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberRegister } from '../models/memberpage';
 import { memberService } from '../service/member.service';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-addpolicy',
@@ -26,7 +27,7 @@ export class AddpolicyComponent implements OnInit {
     email:'',
     memberId: localStorage.getItem("example")?.toString(),
   }
-  constructor(private memberService: memberService) { }
+  constructor(private memberService: memberService,private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -39,11 +40,12 @@ export class AddpolicyComponent implements OnInit {
       this.memberService.AddPolicy(this.user)
     .subscribe(
       response => {
-        // this.users=Object.values(response);
         this.users = response;
          console.log(this.users);
          localStorage.setItem("UserId",this.user.memberId.toString());
          console.log(localStorage.getItem("UserId")?.toString());
+         alert(this.users);
+         this.router.navigate(['/memberSearch'])
       }
     );
     }
