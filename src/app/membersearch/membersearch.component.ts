@@ -48,10 +48,12 @@ export class MembersearchComponent implements OnInit {
       response => {
         // this.users=Object.values(response);
         this.users = response;
-         console.log(this.users);
-         localStorage.setItem("example",this.user.memberId.toString());
-         console.log(localStorage.getItem("example")?.toString());
+         console.log(this.users);localStorage.setItem("example",this.users[0][0].memberId.toString());
+         console.log(localStorage.getItem("example"));
+        //  localStorage.setItem("example",this.user.memberId.toString());
+        //  console.log(localStorage.getItem("example")?.toString());
          this.router.navigate(['/addpolicy']);
+
       }
     );
 }
