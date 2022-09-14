@@ -36,14 +36,24 @@ export class MemberComponent implements OnInit {
   response:any;
   ErrMsg=''
   onSubmit() {
+    if(this.user.address!='' && this.user.firstName!='' && this.user.lastName!='' && this.user.state!=''
+    && this.user.email!='' && this.user.userName!='')
+    {
       debugger;
       this.memberService.User(this.user)
       .subscribe(
         response => {
           console.log(response);
           this.response = response;
+          this.router.navigate(['/memberSearch']);
           return;
         }
       )
-      }     
+      } 
+      else 
+      {
+        this.ErrMsg= "Please fill all the details"
+        return ;
+      }    
+    }
 }

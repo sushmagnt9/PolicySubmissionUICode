@@ -45,13 +45,18 @@ export class AdminsearchComponent implements OnInit {
    onRedirect(user : MemberRegister){
          // this.users=Object.values(response);
          debugger;
-         console.log(this.users);
+          console.log(user);
+
           localStorage.setItem("UserId",user.memberId.toString());
           console.log(localStorage.getItem("UserId")?.toString());
-          localStorage.setItem("policyStatus",this.user.policyStatus.toString());
+          localStorage.setItem("policyStatus",user.policyStatus.toString());
           console.log(localStorage.getItem("policyStatus")?.toString());
-          localStorage.setItem("premiumAmount",this.user.premiumAmount.toString());
+          localStorage.setItem("premiumAmount",user.premiumAmount.toString());
           console.log(localStorage.getItem("premiumAmount")?.toString());
+          localStorage.setItem("policyType",user.policyType.toString());
+          console.log(localStorage.getItem("policyType")?.toString());
+          localStorage.setItem("policyEffectiveDate",user.policyEffectiveDate.toString());
+          console.log(localStorage.getItem("policyEffectiveDate")?.toString());
           this.router.navigate(['/updatepolicy']);
        }
     

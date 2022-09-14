@@ -41,7 +41,11 @@
             </div>
 
             <div class="form-group">
-            <a  (click)="onSubmit()" href='memberSearch' type="button" id="button2" class="btn btn-warning float-right">Register</a>
+            <a  (click)="onSubmit()" type="button" class="btn btn-warning float-right">Register</a>
             </div>
+
+            <div *ngIf="ErrMsg" type = "button" class="btn btn-warning">
+              <h4>Please fill all the details</h4>
+          </div>
           
 </div>
