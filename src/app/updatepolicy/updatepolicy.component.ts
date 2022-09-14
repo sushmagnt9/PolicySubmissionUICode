@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberRegister } from '../models/memberpage';
 import { memberService } from '../service/member.service';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-updatepolicy',
@@ -26,7 +27,7 @@ export class UpdatepolicyComponent implements OnInit {
     email:'',
     memberId: localStorage.getItem("UserId")?.toString(),
   }
-  constructor(private memberService: memberService) { }
+  constructor(private memberService: memberService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +38,8 @@ export class UpdatepolicyComponent implements OnInit {
         // this.users=Object.values(response);
         this.users = response;
          console.log(this.users);
+         alert(this.users);
+         this.router.navigate(['/memberSearch'])
       }
     );
 }
