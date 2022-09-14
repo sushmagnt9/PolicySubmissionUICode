@@ -46,8 +46,15 @@ export class RegisterComponent implements OnInit {
         response => {
           console.log(response);
           this.response = response;
-          this.router.navigate(['/member']);
-          return;
+          localStorage.setItem('response',this.response.response,)
+          if(this.user.UserRole=='Member')
+          {
+            this.router.navigate(['/member']);
+          }
+        else if(this.user.UserRole=='Admin')
+        {
+          this.router.navigate(['/memberSearch']);
+        }
           // if(this.response.UserRole=='Author')
           // {
           //   this.router.navigate(['/createbooks']);
@@ -57,6 +64,6 @@ export class RegisterComponent implements OnInit {
           // }
         }
       )
-      } 
-    }    
+    } 
+  }   
 }

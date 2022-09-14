@@ -9,14 +9,13 @@
             <input type="password" placeholder="Enter Password" name="password" #password="ngModel" required [(ngModel)]="user.Password">
             <div *ngIf="password.errors?.['required'] && password.touched" class="text-danger">Password is Required.</div>
           
+            
             <label for="UserRole"><b>UserRole</b></label>
             <select name="Roles" id="UserRole" [(ngModel)]="user.UserRole">
               <option value="Admin">Admin</option>
               <option value="Member">Member</option>
             </select>
             
-            
-
             <div *ngIf="EmpMsg" type = "button" class="btn btn-warning">
               <h4>please provide all details to register</h4>
             </div>
