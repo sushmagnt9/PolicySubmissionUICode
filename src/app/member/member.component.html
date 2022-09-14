@@ -13,16 +13,17 @@
             <input type="text" placeholder="Enter Name" name="lastname" #lastname="ngModel" required [(ngModel)]="user.lastName">
             <div *ngIf="lastname.errors?.['required'] && lastname.touched" class="text-danger">LastName is Required.</div>
 
-            <label for="DOB"><b>DOB</b></label>
-            <input type="date" placeholder="Enter DOB" name="dob" #dob="ngModel" required [(ngModel)]="user.dob">
-            <div *ngIf="dob.errors?.['required'] && dob.touched" class="text-danger">DOB is Required.</div>
-
             <div>
             <label for="Address"><b>Address</b></label>
             <input type="text" placeholder="Enter Address" name="address" #address="ngModel" required [(ngModel)]="user.address">
             <div *ngIf="address.errors?.['required'] && address.touched" class="text-danger">Address is Required.</div>
             </div>
 
+            <div>
+              <label for="DOB"><b>DOB</b></label>
+            <input type="date" placeholder="Enter DOB" name="dob" #dob="ngModel" required [(ngModel)]="user.dob">
+            <div *ngIf="dob.errors?.['required'] && dob.touched" class="text-danger">DOB is Required.</div>
+         
             <label for="State"><b>State</b></label>
             <select name="states" id="State" [(ngModel)]="user.state">
               <option value="AndhraPradesh">AndhraPradesh</option>
@@ -31,6 +32,7 @@
               <option value="Assam">Assam</option>
               <option value="Bihar">Bihar</option>
             </select>
+          </div>
 
             <div>
             <label for="Email"><b>Email</b></label>
@@ -38,23 +40,6 @@
             <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">Email is Required.</div>
             </div>
 
-            <!-- <style>
-              #button1{
-              width: 300px;
-              height: 40px;
-              
-              }
-              #button2{
-              width: 300px;
-              height: 40px;
-              }
-              </style> -->
-
-
-            <!-- <div class="form-group">
-            <a  (click)="onSubmit()" type="button" id="button1" class="btn btn-primary">Cancel</a>
-            </div> -->
-            
             <div class="form-group">
             <a  (click)="onSubmit()" href='memberSearch' type="button" id="button2" class="btn btn-warning float-right">Register</a>
             </div>

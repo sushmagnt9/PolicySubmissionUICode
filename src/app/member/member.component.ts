@@ -42,8 +42,6 @@ export class MemberComponent implements OnInit {
         response => {
           console.log(response);
           this.response = response;
-          alert('registration sucess');
-          this.ErrMsg = 'registration sucess';
           return;
         }
       )
