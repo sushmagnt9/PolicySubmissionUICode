@@ -8,7 +8,7 @@ import { MembersearchComponent } from '../membersearch/membersearch.component';
 import { RegisterComponent } from '../register/register.component';
 import { UpdatepolicyComponent } from '../updatepolicy/updatepolicy.component';
 
-const routes: Routes = [{path : '' , component : LoginComponent},
+const routes: Routes = [{path : 'login' , component : LoginComponent},
 {path : 'register' , component : RegisterComponent},
 {path : 'member' , component : MemberComponent},
 {path : 'memberSearch' , component : MembersearchComponent},

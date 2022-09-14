@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
   response:any;
   ErrMsg=''
+  EmpMsg=''
   onSubmit() {
     if(this.user.UserName!='' && this.user.Password!=''){
 
@@ -59,6 +60,11 @@ export class LoginComponent implements OnInit {
           
         }
       )
+      }
+      if(this.user.UserName=='' && this.user.Password=='')
+      {
+        this.EmpMsg = 'please provide email and password';
+        return;
       }
 }
 }
