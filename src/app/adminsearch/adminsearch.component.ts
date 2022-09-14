@@ -59,6 +59,20 @@ export class AdminsearchComponent implements OnInit {
           console.log(localStorage.getItem("policyEffectiveDate")?.toString());
           this.router.navigate(['/updatepolicy']);
        }
+
+       onAddPolicy(){
+        this.memberService.AddPolicy(this.user)
+        .subscribe(
+          response => {
+            // this.users=Object.values(response);
+            this.users = response;
+             console.log(this.users);
+             localStorage.setItem("UserId",this.user.memberId.toString());
+             console.log(localStorage.getItem("UserId")?.toString());
+             this.router.navigate(['/addpolicy']);
+          }
+        );
+    }
     
  
  

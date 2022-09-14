@@ -65,7 +65,8 @@
                                     <td>{{member.policyType}}</td>
                                     <td>{{member.premiumAmount}}</td>
                                     <td>{{member.policyEffectiveDate}}</td> 
-                                    <td><input type ="checkbox"/></td>
+                                    <td><input type ="checkbox" value = "AddPolicy" id = "AddPolicy"
+                                        (click) = "onAddPolicy()"/> </td>
                                     <td><input type = "checkbox" value = "updatePolicy" id = "updatePolicy"
                                        (click) = "onRedirect(member)"/> </td>
                                 </tr>
