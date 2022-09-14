@@ -15,25 +15,15 @@
               <option value="Member">Member</option>
             </select>
             
-            <style>
-              #button1{
-              width: 300px;
-              height: 40px;
-              
-              }
-              #button2{
-              width: 300px;
-              height: 40px;
-              }
-              </style>
+            
 
-
-            <div class="form-group">
-            <a  (click)="onSubmit()" type="button" id="button1" class="btn btn-primary">Cancel</a>
+            <div *ngIf="EmpMsg" type = "button" class="btn btn-warning">
+              <h4>please provide all details to register</h4>
             </div>
+           
             
             <div class="form-group">
-            <a  (click)="onSubmit()" href='member' type="button" id="button2" class="btn btn-primary">Register</a>
+            <a  (click)="onSubmit()" href='member' type="button"  class="btn btn-primary">Register</a>
             </div>
           
 </div>
