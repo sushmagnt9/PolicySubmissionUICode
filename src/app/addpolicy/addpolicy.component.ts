@@ -30,8 +30,13 @@ export class AddpolicyComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(){
-    this.memberService.AddPolicy(this.user)
+  response:any;
+  EmpMsg='';
+  onSubmit(){ 
+    debugger;
+    if(this.user.policyStatus!=''&&this.user.policyType!=''&&this.user.premiumAmount!=''&&this.user.policyEffectiveDate!='') 
+    {
+      this.memberService.AddPolicy(this.user)
     .subscribe(
       response => {
         // this.users=Object.values(response);
@@ -41,6 +46,11 @@ export class AddpolicyComponent implements OnInit {
          console.log(localStorage.getItem("UserId")?.toString());
       }
     );
-}
-
+    }
+    if(this.user.policyStatus=='' && this.user.policyType=='' && this.user.premiumAmount=='' && this.user.policyEffectiveDate=='')
+    {
+      this.EmpMsg = 'please provide all details to add policy';
+      return;
+    }  
+ }
 }

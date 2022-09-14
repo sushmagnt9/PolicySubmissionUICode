@@ -28,6 +28,10 @@
             <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" #policyeffectivedate="ngModel" required [(ngModel)]="user.policyEffectiveDate">
             <div *ngIf="policyeffectivedate.errors?.['required'] && policyeffectivedate.touched" class="text-danger">policyEffectiveDate is Required.</div>
     
+            <div *ngIf="EmpMsg" type = "button" class="btn btn-warning">
+              <h4>please provide all details to add policy</h4>
+          </div>
+
             <div class="form-group">
             <a  (click)="onSubmit()" type="button" class="btn btn-primary">AddPolicy</a>
             </div>

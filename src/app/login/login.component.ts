@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
       }
       if(this.user.UserName=='' && this.user.Password=='')
       {
-        this.EmpMsg = 'please provide email and password';
+        this.EmpMsg = 'please provide UserName and password';
         return;
       }
 }
