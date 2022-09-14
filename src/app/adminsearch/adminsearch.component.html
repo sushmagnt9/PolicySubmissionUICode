@@ -71,7 +71,8 @@
                                        (click) = "onRedirect(member)"/> </td>
                                 </tr>
                             </tbody>
-
+                            <button *ngIf="add" (click) = "onAddingPolicy()">AddPolicy </button>
+                            <button *ngIf="update" (click) = "onUpdatingPolicy()">UpdatePolicy</button>
                             <!-- <div class="form-group">
                                 <a  (click)="onRedirect()"  type="button" class="btn btn-primary">Update Policy</a>
                                 </div> -->

@@ -41,8 +41,12 @@ export class AdminsearchComponent implements OnInit {
        }
      )
    }
- 
+   add : boolean = false;
+   update : boolean = false;
    onRedirect(user : MemberRegister){
+    
+    this.add = false ; 
+    this.update = true ;
          // this.users=Object.values(response);
          debugger;
           console.log(user);
@@ -57,10 +61,21 @@ export class AdminsearchComponent implements OnInit {
           console.log(localStorage.getItem("policyType")?.toString());
           localStorage.setItem("policyEffectiveDate",user.policyEffectiveDate.toString());
           console.log(localStorage.getItem("policyEffectiveDate")?.toString());
-          this.router.navigate(['/updatepolicy']);
+          //this.router.navigate(['/updatepolicy']);
        }
 
+       onAddingPolicy()
+       {
+        this.router.navigate(['/addpolicy']);
+       }
+       onUpdatingPolicy()
+       {
+        this.router.navigate(['/updatepolicy']);
+       }
        onAddPolicy(){
+        this.add = true; 
+        this.update = false;
+        
         this.memberService.AddPolicy(this.user)
         .subscribe(
           response => {
@@ -69,7 +84,7 @@ export class AdminsearchComponent implements OnInit {
              console.log(this.users);
              localStorage.setItem("UserId",this.user.memberId.toString());
              console.log(localStorage.getItem("UserId")?.toString());
-             this.router.navigate(['/addpolicy']);
+             //this.router.navigate(['/addpolicy']);
           }
         );
     }
