@@ -1,17 +1,21 @@
 <div class="container">
     <h1>Policy Submission</h1>
     
-      <div>
-      <label for="MemberId"><b>MemberId</b></label>
-              <input type="MemberId" name="memberId" placeholder="Enter MemberId" name="Title" [(ngModel)]="user.memberId">
-              </div>
+            <div>
+            <label for="MemberId"><b>MemberId</b></label>
+            <input type="MemberId" name="memberId" placeholder="Enter MemberId" name="Title" [(ngModel)]="user.memberId">
+            </div>
 
-            <label for="name"><b>Policy Type</b></label>
-            <input type="text" placeholder="Enter policyType" name="policytype"  [(ngModel)]="user.policyType">
-          
             <label for="premiumamount"><b>Premium Amount</b></label>
             <input type="text" placeholder="Enter premiumAmount" name="premiumamount"  [(ngModel)]="user.premiumAmount">
             
+            <label for="policyType"><b>Policy Type</b></label>
+            <select name="type" id="policyType" [(ngModel)]="user.policyType">
+              <option value="HealthInsurance">HealthInsurance</option>
+              <option value="LifeInsurance">LifeInsurance</option>
+              <option value="HomeInusrance">HomeInusrance</option>
+            </select>
+
             <label for="policyStatus"><b>Policy Status</b></label>
             <select name="status" id="policyStatus" [(ngModel)]="user.policyStatus">
               <option value="FreeLookUp">FreeLookUp</option>
@@ -22,10 +26,9 @@
               <option value="Loan">Loan</option>
             </select>
 
-            <div>
             <label for="policyEffective date"><b>Policy Effective Date</b></label>
             <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" [(ngModel)]="user.policyEffectiveDate">
-            </div>
+            
 
             <div class="form-group">
             <a  (click)="onSubmit()" type="button" class="btn btn-primary">updatePolicy</a>

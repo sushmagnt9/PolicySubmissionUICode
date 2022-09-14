@@ -6,14 +6,17 @@
               <input type="MemberId" name="memberId" placeholder="Enter MemberId" name="Title" [(ngModel)]="user.memberId">
               </div>
 
-            <label for="name"><b>Policy Type</b></label>
-            <input type="text" placeholder="Enter policyType" name="policytype" #policytype="ngModel" required [(ngModel)]="user.policyType">
-            <div *ngIf="policytype.errors?.['required'] && policytype.touched" class="text-danger">PolicyType is Required.</div>
-          
             <label for="premiumamount"><b>Premium Amount</b></label>
             <input type="text" placeholder="Enter premiumAmount" name="premiumamount" #premiumamount="ngModel" required [(ngModel)]="user.premiumAmount">
             <div *ngIf="premiumamount.errors?.['required'] && premiumamount.touched" class="text-danger">premiumAmount is Required.</div>
-        
+
+            <label for="policyType"><b>Policy Type</b></label>
+            <select name="type" id="policyType" [(ngModel)]="user.policyType">
+              <option value="HealthInsurance">HealthInsurance</option>
+              <option value="LifeInsurance">LifeInsurance</option>
+              <option value="HomeInusrance">HomeInusrance</option>
+            </select>
+
             <label for="policyStatus"><b>Policy Status</b></label>
             <select name="status" id="policyStatus" [(ngModel)]="user.policyStatus">
               <option value="FreeLookUp">FreeLookUp</option>
