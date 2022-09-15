@@ -29,9 +29,21 @@
             <label for="policyEffective date"><b>Policy Effective Date</b></label>
             <input type="date" placeholder="Enter policyEffectiveDate" name="policyeffectivedate" [(ngModel)]="user.policyEffectiveDate">
             
-
-            <div class="form-group">
-            <a  (click)="onSubmit()" type="button" class="btn btn-primary">updatePolicy</a>
+            <div>
+              <p *ngIf="success"> {{this.users.result}} </p>
             </div>
+            <div class="form-group">
+              <button style="background-color: blue;"  class="btn btn-primary btn-block" (click)="onSubmit()">Update Policy</button>
+
+            </div>
+            <div *ngIf="showField">
+              <button (click)="onLinkUpdate()">
+                Back To Search
+              </button>
+            </div>
+
+            <!-- <div class="form-group">
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">updatePolicy</a>
+            </div> -->
           
 </div>

@@ -27,6 +27,9 @@ export class UpdatepolicyComponent implements OnInit {
     email:'',
     memberId: localStorage.getItem("UserId")?.toString(),
   }
+  response:any;
+  success:boolean = false;
+  showField : boolean =false;
   constructor(private memberService: memberService,private router: Router) { }
 
   ngOnInit(): void {
@@ -38,10 +41,16 @@ export class UpdatepolicyComponent implements OnInit {
         // this.users=Object.values(response);
         this.users = response;
          console.log(this.users);
-         alert(this.users);
-         this.router.navigate(['/memberSearch'])
+         this.success = true;
+         this.showField = true;
+        //  alert(this.users);
+        //  this.router.navigate(['/adminSearch'])
       }
     );
+}
+onLinkUpdate()
+{
+this.router.navigate(['/adminSearch'])
 }
 
 }
