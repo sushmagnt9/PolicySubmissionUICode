@@ -33,6 +33,8 @@ export class AddpolicyComponent implements OnInit {
   }
   response:any;
   EmpMsg='';
+  success:boolean = false;
+  showField : boolean =false;
   onSubmit(){ 
     debugger;
     if(this.user.policyStatus!=''&&this.user.policyType!=''&&this.user.premiumAmount!=''&&this.user.policyEffectiveDate!='') 
@@ -44,8 +46,8 @@ export class AddpolicyComponent implements OnInit {
          console.log(this.users);
          localStorage.setItem("UserId",this.user.memberId.toString());
          console.log(localStorage.getItem("UserId")?.toString());
-         alert(this.users);
-         this.router.navigate(['/memberSearch'])
+         this.success = true;
+         this.showField = true;
       }
     );
     }
@@ -53,6 +55,11 @@ export class AddpolicyComponent implements OnInit {
     {
       this.EmpMsg = 'please provide all details to add policy';
       return;
-    }  
+    } 
+     
+ }
+ onAddUpdate()
+ {
+ this.router.navigate(['/memberSearch'])
  }
 }
