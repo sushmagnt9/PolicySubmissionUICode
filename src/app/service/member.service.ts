@@ -10,10 +10,10 @@ import { MemberRegister } from '../models/memberpage';
 })
 export class memberService{
 
-  baseUrl = 'https://localhost:7221/Registration';
-  baseUrl1 = 'https://localhost:7221/Registration/GetMemberById';
-  baseUrl2 = 'https://localhost:7221/Policy';
-  baseUrl3 = 'https://localhost:7221/Policy/UpdatePolicy';
+  baseUrl = 'https://policysubmission20220916080641.azurewebsites.net/Registration';
+  baseUrl1 = 'https://policysubmission20220916080641.azurewebsites.net/Registration/GetMemberById';
+  baseUrl2 = 'https://policysubmission20220916080641.azurewebsites.net/Policy';
+  baseUrl3 = 'https://policysubmission20220916080641.azurewebsites.net/Policy/UpdatePolicy';
 
   constructor(private http: HttpClient) { }
 

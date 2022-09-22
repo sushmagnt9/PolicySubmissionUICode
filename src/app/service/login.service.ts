@@ -9,7 +9,7 @@ import { User } from '../models/loginpage';
 })
 export class loginService{
 
-  baseUrl = 'https://localhost:7221/User/Login';
+  baseUrl = 'https://policysubmission20220916080641.azurewebsites.net/User/Login';
 
   constructor(private http: HttpClient) { }
 

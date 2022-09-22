@@ -66,5 +66,10 @@ export class LoginComponent implements OnInit {
         this.EmpMsg = 'please provide UserName and password';
         return;
       }
+      
 }
+    onRegister()
+    {
+      this.router.navigate(['/register']);
+    }
 }

@@ -9,7 +9,7 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class registerService{
 
-  baseUrl = 'https://localhost:7221/User';
+  baseUrl = 'https://policysubmission20220916080641.azurewebsites.net/User';
 
   constructor(private http: HttpClient) { }
 
